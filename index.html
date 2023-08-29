@@ -71,8 +71,8 @@
     // let finalQuote = capital * Math.pow((1 + (rate / n)), n * t);
 
 
-    function calculateFinalQuote(capital, rate, interestPeriod, investmentTime) {
-      return capital * Math.pow((1 + (rate/interestPeriod)), interestPeriod * investmentTime);
+    function calculateGain(rate, interestPeriod, investmentTime) {
+      return Math.pow((1 + (rate/interestPeriod)), interestPeriod * investmentTime);
     };
 
     resultBtn.addEventListener('click', function() {
@@ -80,7 +80,7 @@
       const rate = rateElement.value;
       const interestPeriod = interestPeriodElement.value;
       const investmentTime = investmentTimeElement.value;
-      const result = calculateFinalQuote(capital, rate, interestPeriod, investmentTime);
+      const result = capital * calculateGain(rate, interestPeriod, investmentTime);
 
       resultInput.value = result.toFixed(2);  // dla inputu nie używamy .innerHTML
     });
@@ -90,7 +90,7 @@
       const rate = rateElement.value;
       const interestPeriod = interestPeriodElement.value;
       const investmentTime = investmentTimeElement.value;
-      const result = calculateFinalQuote(capital, rate, interestPeriod, investmentTime) - capital;
+      const result = capital * calculateGain(rate, interestPeriod, investmentTime) - capital;
 
       interestInput.value = result.toFixed(2);
     });
