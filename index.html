@@ -19,7 +19,7 @@
       justify-content: center;
       margin-top: 80px;
     }
-    
+
     .grid {
       display: grid;
       grid-template-columns: 300px 300px;
@@ -33,16 +33,16 @@
 </head>
 <body>
   <div class="grid">
-    <label>Kapitał:</label>  <!-- <label> ustawia się w rzędzie tak jak button -->
+    <label for="capital">Kapitał:</label>  <!-- <label> ustawia się w rzędzie tak jak button -->
     <input type="text" id="capital" value="1000" placeholder="1000">
 
-    <label>Oprocentowanie:</label>
+    <label for="rate">Oprocentowanie:</label>
     <input type="text" id="rate" value="0.04" placeholder="0.04">
 
-    <label>Okres kapitalizacji odsetek:</label>  <!-- <p> zabiera cały rząd dla siebie -->
+    <label for="interest-period">Okres kapitalizacji odsetek:</label>  <!-- <p> zabiera cały rząd dla siebie -->
     <input type="text" id="interest-period" value="12" placeholder="6 miesięcy">
 
-    <label>Czas inwestycji:</label>
+    <label for="investment-time">Czas inwestycji:</label>
     <input type="text" id="investment-time" value="3" placeholder="3 lata">
 
     <button class="result-btn">Oblicz wartość końcową inwestycji</button>
