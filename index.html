@@ -88,7 +88,7 @@
 
     interestBtn.addEventListener("click", function() {
       const capital = capitalElement.value;
-      const result = capital * calculateGain() - capital;
+      const result = capital * (calculateGain() - 1);
 
       interestInput.value = result.toFixed(2);
     });
