@@ -80,8 +80,8 @@
       const rate = rateElement.value;
       const interestPeriod = interestPeriodElement.value;
       const investmentTime = investmentTimeElement.value;
+      const result = calculateFinalQuote(capital, rate, interestPeriod, investmentTime);
 
-      let result = calculateFinalQuote(capital, rate, interestPeriod, investmentTime);
       resultInput.value = result.toFixed(2);  // dla inputu nie używamy .innerHTML
     });
 
@@ -90,9 +90,9 @@
       const rate = rateElement.value;
       const interestPeriod = interestPeriodElement.value;
       const investmentTime = investmentTimeElement.value;
+      const result = calculateFinalQuote(capital, rate, interestPeriod, investmentTime) - capital;
 
-      interestOnly = calculateFinalQuote(capital, rate, interestPeriod, investmentTime) - capital;
-      interestInput.value = interestOnly.toFixed(2);
+      interestInput.value = result.toFixed(2);
     });
 
   </script>
