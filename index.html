@@ -54,14 +54,14 @@
 
   <script>
     // capital * Math.pow(1 + (0.04/6)), (6 * 3))
-    const capital = document.getElementById("capital").value;
-    const rate = document.getElementById("rate").value;
-    const interestPeriod = document.getElementById("interest-period").value;
-    const investmentTime = document.getElementById("investment-time").value;
-    const resultInput = document.getElementById("result-input");
-    const interestInput = document.getElementById("interest-input");
-    const resultBtn = document.querySelector(".result-btn");
-    const interestBtn = document.querySelector(".interest-btn");
+    const capital = document.getElementById('capital').value;
+    const rate = document.getElementById('rate').value;
+    const interestPeriod = document.getElementById('interest-period').value;
+    const investmentTime = document.getElementById('investment-time').value;
+    const resultInput = document.getElementById('result-input');
+    const interestInput = document.getElementById('interest-input');
+    const resultBtn = document.querySelector('.result-btn');
+    const interestBtn = document.querySelector('.interest-btn');
 
     // let capital = inputCapital.value;
     // let rate = inputRate.value;
@@ -75,21 +75,21 @@
       return capital * Math.pow((1 + (rate/interestPeriod)), interestPeriod * investmentTime);
     };
 
-    resultBtn.addEventListener("click", function() {
-      const capital = document.getElementById("capital").value;
-      const rate = document.getElementById("rate").value;
-      const interestPeriod = document.getElementById("interest-period").value;
-      const investmentTime = document.getElementById("investment-time").value;
+    resultBtn.addEventListener('click', function() {
+      const capital = document.getElementById('capital').value;
+      const rate = document.getElementById('rate').value;
+      const interestPeriod = document.getElementById('interest-period').value;
+      const investmentTime = document.getElementById('investment-time').value;
 
       let result = calculateFinalQuote(capital, rate, interestPeriod, investmentTime);
       resultInput.value = result.toFixed(2);  // dla inputu nie używamy .innerHTML
     });
 
     interestBtn.addEventListener("click", function() {
-      const capital = document.getElementById("capital").value;
-      const rate = document.getElementById("rate").value;
-      const interestPeriod = document.getElementById("interest-period").value;
-      const investmentTime = document.getElementById("investment-time").value;
+      const capital = document.getElementById('capital').value;
+      const rate = document.getElementById('rate').value;
+      const interestPeriod = document.getElementById('interest-period').value;
+      const investmentTime = document.getElementById('investment-time').value;
 
       interestOnly = calculateFinalQuote(capital, rate, interestPeriod, investmentTime) - capital;
       interestInput.value = interestOnly.toFixed(2);
